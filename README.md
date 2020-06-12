@@ -1,6 +1,7 @@
 # Laboratorio-Engenharia-Software---Site-de-noticias---
 Neste Diretório sera realizado os trabalhos da disciplina de laboratório de engenharia de software.
 <p>O projeto deste github tem como objetivo o desenvolvimento o servidor web criado em um ambiente java</p>
+<p>O Projeto esta na pasta Calc</p>
 <h2>Tecnologias Utilizadas deste Projeto</h2>
 <ol>
 <li>Tecnologias do front-end</li>
