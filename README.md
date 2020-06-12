@@ -4,20 +4,20 @@ Neste Diretório sera realizado os trabalhos da disciplina de laboratório de en
 <h2>Tecnologias Utilizadas deste Projeto</h2>
 <ol>
 <li>Tecnologias do front-end</li>
-[x]HMTL5
-[x]CSS3
-[ ]javascript
+[x]HMTL5<br>
+[x]CSS3<br>
+[ ]javascript<br>
 <li>Tecnologias do back-end</li>
-[x]Java
-[x]Gradle
-[x]servlet & JSP
-[ ]MySQL
-[ ]Hibernate
+[x]Java<br>
+[x]Gradle<br>
+[x]servlet & JSP<br>
+[ ]MySQL<br>
+[ ]Hibernate<br>
 </ol>
 <h2>Funções do Projeto</h2>
-[x]Navegação da paginas do site
-[ ]login de usuario
-[ ]criar conta
-[ ]calculadora
-[ ]editar dados do usuario
-[ ]Historico de atividade sobre o uso da calculadora
+[x]Navegação da paginas do site<br>
+[ ]login de usuario<br>
+[ ]criar conta<br>
+[ ]calculadora<br>
+[ ]editar dados do usuario<br>
+[ ]Historico de atividade sobre o uso da calculadora<br>
