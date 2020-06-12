@@ -1,0 +1,44 @@
+plugins{
+    id 'java'
+    id 'war'
+    id 'org.gretty' version '2.2.0'
+}
+
+// NetBeans will automatically add "run" and "debug" tasks relying on the
+// "mainClass" property. You may however define the property prior executing
+// tasks by passing a "-PmainClass=<QUALIFIED_CLASS_NAME>" argument.
+//
+// Note however, that you may define your own "run" and "debug" task if you
+// prefer. In this case NetBeans will not add these tasks but you may rely on
+// your own implementation.
+
+
+repositories {
+    jcenter()
+    // You may define additional repositories, or even remove "mavenCentral()".
+    // Read more about repositories here:
+    //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:repositories
+}
+
+dependencies {
+    // TODO: Add dependencies here ...
+    // You can read more about how to add dependency here:
+    //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:how_to_declare_your_dependencies
+    testCompileOnly 'org.junit.jupiter:junit-jupiter-api:5.3.1' /*compila a aplicação de teste*/
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'/*execulta a aplicação de teste*/
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    //Mockito framework
+    
+//    testCompile "org.mockito:mockito-core:2.+"
+//
+//    implementation 'mysql:mysql-connector-java:8.0.18'
+//    implementation 'org.hibernate:hibernate-core:5.4.17.Final'
+//    implementation 'org.hibernate:hibernate-entitymanager:5.4.17.Final'
+}
+test{
+    useJUnitPlatform()
+}
+
+gretty{
+    servletContainer = 'tomcat8'
+}
