@@ -2,6 +2,7 @@ plugins{
     id 'java'
     id 'war'
     id 'org.gretty' version '2.2.0'
+    
 }
 
 // NetBeans will automatically add "run" and "debug" tasks relying on the
@@ -29,16 +30,15 @@ dependencies {
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
     //Mockito framework
     
-//    testCompile "org.mockito:mockito-core:2.+"
-//
-//    implementation 'mysql:mysql-connector-java:8.0.18'
-//    implementation 'org.hibernate:hibernate-core:5.4.17.Final'
-//    implementation 'org.hibernate:hibernate-entitymanager:5.4.17.Final'
+    implementation 'mysql:mysql-connector-java:8.0.18'
+    implementation 'org.hibernate:hibernate-core:5.4.17.Final'
+    implementation 'org.hibernate:hibernate-entitymanager:5.4.17.Final'
 }
 test{
     useJUnitPlatform()
 }
 
 gretty{
+   
     servletContainer = 'tomcat8'
 }
