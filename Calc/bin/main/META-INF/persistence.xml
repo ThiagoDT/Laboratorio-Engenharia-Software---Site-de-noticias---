@@ -3,19 +3,19 @@
   <!-- O nome da unidade de persistência é referenciado na criação da fábrica
        de gerenciadores de entidade.-->
   <persistence-unit name="persistencia_simples">
-    <description>Calculadora web</description>
+    <description> Exemplo simples de CRUD
+                  com JPA - Hibernate 5</description>
     <!-- Provedor da implementação das especificações de interface do JPA -->
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>model.Usuario</class>
-    <class>model.Historico</class>
     <properties>
-      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/calculadora?serverTimezone=UTC"/>
-      <property name="javax.persistence.jdbc.user" value="thiago"/>
-      <property name="javax.persistence.jdbc.password" value="teste123@@"/>
-      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect"/>
       <property name="hibernate.show_sql" value="true"/>
-      <property name="hibernate.format_sql" value="false"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/calculadora"/>
+      <property name="javax.persistence.jdbc.user" value="thiago"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.driver"/>
+      <property name="javax.persistence.jdbc.password" value="teste123@@"/>
     </properties>
   </persistence-unit>
 </persistence>
