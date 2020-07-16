@@ -29,10 +29,10 @@ Cada padão ajudou o desenvolvimento e foi utilizado no projeto na seguinte mane
 No projeto foi desenvolvido em fases, que cada fase implementa um função, uma tecnologia e uma maneira de desenvolvimento. O projeto constitui-se 5 fases que são:
 
 #### Fase 1 - criação da funções da calculadora
-- [x]Adição
-- [x]Subtração
-- [x]Multiplicação
-- [x]Divisão
+- [x] Adição
+- [x] Subtração
+- [x] Multiplicação
+- [x] Divisão
 
 #### Fase 2 - Mapiamento das paginas
 - [x] Criação do formulario index
@@ -67,10 +67,10 @@ No projeto foi desenvolvido em fases, que cada fase implementa um função, uma 
 - [ ] Adicionamento do ajax na função de atualizar os dados do usuario
 
 ## Funções concluidas do projeto Projeto
-- [x]Navegação da paginas do site
-- [x]Login de usuario
-- [x]Criar conta
-- [x]Calculadora
-- [ ]Editar dados do usuario
-- [ ]Historico de atividade sobre o uso da calculadora
+- [x] Navegação da paginas do site
+- [x] Login de usuario
+- [x] Criar conta
+- [x] Calculadora
+- [ ] Editar dados do usuario
+- [ ] Historico de atividade sobre o uso da calculadora
 
