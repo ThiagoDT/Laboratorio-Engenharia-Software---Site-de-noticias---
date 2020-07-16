@@ -21,8 +21,8 @@ __Tecnologias do back-end__
 Para o desenvolvimentodo projeto, foi utilizado alguns padrãos de projetos como __MVC__ (Model View Controller) que separa a construção do projeto, ___strategy__ que auxilia as funções com comportamento semelhantes, e o __singleton__ que introduz a criação de um objeto.
 Cada padão ajudou o desenvolvimento e foi utilizado no projeto na seguinte maneira:
 * __MVC__ - Para a construção e divisão do CalcWEB em partes.
-* ___strategy__ - Foi utilizado nas funções da calculadora como adição, subtração, divisão e multiplicação.
-* __singleton__ - para criar o objeto de criação e manipulação do banco de dados.
+* __Strategy__ - Foi utilizado nas funções da calculadora como adição, subtração, divisão e multiplicação.
+* __Singleton__ - para criar o objeto de criação e manipulação do banco de dados.
 
 
 ### Fases do projeto
