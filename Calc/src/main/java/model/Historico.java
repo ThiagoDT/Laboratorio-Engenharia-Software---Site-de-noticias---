@@ -5,45 +5,45 @@ import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Column;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.FetchType;
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Historico {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long id;
     
     @Basic
     @Column(nullable = false)
-    private long valor1;
+    private float valor1;
     
     @Basic
     @Column(nullable = false)
-    private long valor2;
+    private float valor2;
     
     @Basic
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false, length = 15)
+    private String operador;
+    
+    @Basic
+    @Column(nullable = false, length = 40)
     private String resultado;
     
-    
     @Basic
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE , orphanRemoval = true)
+    @ManyToOne()
     @JoinColumn(name = "id_usuario", referencedColumnName = "id")
     private Usuario usuario;
 
     public Historico() {
     }
 
-    public Historico(long valor1, long valor2, String resultado, Usuario usuario) {
-        this.id = id;
+    public Historico(float valor1,float valor2,String op, String resultado) {
         this.valor1 = valor1;
         this.valor2 = valor2;
+        this.operador=op;
         this.resultado = resultado;
-        this.usuario = usuario;
     }
 
     /**
@@ -56,14 +56,14 @@ public class Historico {
     /**
      * @return the valor1
      */
-    public long getValor1() {
+    public float getValor1() {
         return valor1;
     }
 
     /**
      * @return the valor2
      */
-    public long getValor2() {
+    public float getValor2() {
         return valor2;
     }
 
@@ -79,6 +79,20 @@ public class Historico {
      */
     public Usuario getUsuario() {
         return usuario;
+    }
+
+    /**
+     * @return the operador
+     */
+    public String getOperador() {
+        return operador;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
     
     
