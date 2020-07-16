@@ -22,16 +22,19 @@ nav{
     margin: 0 auto;
 }
 
-nav li{
+nav li, nav button{
     display: inline-block;
     margin-right: 1em;
     background: #222222;
     padding: 0.5em;
     transition: background 2s;
+    color: white;
+    border: none;
 }
-nav li:hover{
+nav li:hover ,nav button:hover{
     background: #3a3a3a;
     cursor: pointer;
+    border-color: black;
 }
 li a{
     text-decoration: none;

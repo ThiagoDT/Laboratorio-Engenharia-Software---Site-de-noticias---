@@ -14,9 +14,9 @@
         <header>
             <h1>CalcWeb</h1>
             <nav>
-                <ul>
-                    <li><a href="historico">Historico da calculadora</a></li>
-                </ul>
+                <form method="Get" action="historico">
+                    <button type="submit">Historico da calculadora</button>
+                </form>
             </nav>
         </header>
         <main>

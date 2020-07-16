@@ -64,22 +64,10 @@ and open the template in the editor.
            <url-pattern>/calculadora</url-pattern>
         </servlet-mapping>
         
-        <servlet>
-           <servlet-name>historico</servlet-name>
-           <jsp-file>/Templates/historico.jsp</jsp-file>
-           <load-on-startup>3</load-on-startup>
-        </servlet>
-        
-        <servlet-mapping>
-           <servlet-name>historico</servlet-name>
-           <url-pattern>/historico</url-pattern>
-        </servlet-mapping>
-        
-        
         <!--Funções do site-->
         <servlet>
            <servlet-name>verificar</servlet-name>
-           <servlet-class>controller.UsuarioController</servlet-class>
+           <servlet-class>controller.LoginUsuarioController</servlet-class>
         </servlet>
         <servlet-mapping>
            <servlet-name>verificar</servlet-name>
@@ -88,11 +76,20 @@ and open the template in the editor.
         
         <servlet>
            <servlet-name>criarUsuario</servlet-name>
-           <servlet-class>controller.UsuarioController</servlet-class>
+           <servlet-class>controller.CadastrarUsuarioController</servlet-class>
         </servlet>
         <servlet-mapping>
            <servlet-name>criarUsuario</servlet-name>
            <url-pattern>/cadastrarUsuario.action</url-pattern>
+        </servlet-mapping>
+        
+        <servlet>
+           <servlet-name>atualizarUsuario</servlet-name>
+           <servlet-class>controller.AtualizarUsuarioController</servlet-class>
+        </servlet>
+        <servlet-mapping>
+           <servlet-name>atualizarUsuario</servlet-name>
+           <url-pattern>/atualizarUsuario.action</url-pattern>
         </servlet-mapping>
         
         <servlet>
@@ -104,9 +101,23 @@ and open the template in the editor.
            <url-pattern>/resultado.action</url-pattern>
         </servlet-mapping>
         
+        <servlet>
+           <servlet-name>historico</servlet-name>
+           <servlet-class>controller.CalculadoraController</servlet-class>
+        </servlet>
+        
+        <servlet-mapping>
+           <servlet-name>historico</servlet-name>
+           <url-pattern>/historico</url-pattern>
+        </servlet-mapping>
+        
         <!--Tratamento de erro-->
         <error-page>
             <error-code>404</error-code>
             <location>/Templates/nao_encontrado.html</location>
-        </error-page>     
+        </error-page> 
+        <!--Tempo de acesso da sessão-->
+        <session-config>
+            <session-timeout>30</session-timeout>
+        </session-config>    
 </web-app> 
