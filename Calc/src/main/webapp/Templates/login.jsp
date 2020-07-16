@@ -24,7 +24,7 @@
             <section class="conteudo-geral">
                 <div class="formulario">
                     <h2>Login</h2>
-                    <form method="get" action="verificarLogin.action">
+                    <form method="post" action="verificarLogin.action">
                         <div class="form-group row">
                             <label for="email" class="col-sm-2 col-form-label">Email:</label>
                             <div class="col-sm-8">

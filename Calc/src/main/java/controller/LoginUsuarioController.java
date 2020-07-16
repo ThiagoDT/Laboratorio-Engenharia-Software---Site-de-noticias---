@@ -21,7 +21,7 @@ import model.Usuario;
  */
 public class LoginUsuarioController extends HttpServlet{
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse resp){     
+    public void doPost(HttpServletRequest req, HttpServletResponse resp){     
          try{
             ServletContext sc = req.getServletContext();
             resp.setCharacterEncoding("UTF-8");
