@@ -19,6 +19,13 @@
             </nav>
         </header>
         <main>
+            <%@page import="
+                    java.util.*,
+                    model.*" 
+            %>
+            <%
+                Usuario us = (Usuario)request.getAttribute("usuario"); 
+            %>
             <section class="conteudo-geral">
                 <div class="historico row justify-content-center">
                     <div class="col-md-7">
@@ -27,19 +34,19 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Nome:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="nome" value="Thiago" required="true">
+                                <input type="text" class="form-control" name="nome" value="<%=us.getNome()%>" required="true">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Email:</label>
                             <div class="col-sm-8">
-                                <input type="email" class="form-control" name="email"value="thiago@gmail.com" required="true">
+                                <input type="email" class="form-control" name="email" value="<%=us.getEmail()%>" required="true">
                             </div>
                         </div>
                         <div class="form-group row">    
                             <label class="col-sm-2 col-form-label">Senha:</label>
                             <div class="col-sm-8">
-                                <input type="password" class="form-control" name="senha" maxlength="20" value="senha" required="true">
+                                <input type="password" class="form-control" name="senha" maxlength="20" value="<%=us.getSenha()%>"  required="true">
                             </div>
                         </div>
                         <div class="form-group row justify-content-center">  
@@ -48,62 +55,49 @@
                             </div>
                         </div>
                      </form>
+                     <p>
+                     <%
+                        String resposta=(String) request.getAttribute("mensagem");
+                        if(resposta!=null)
+                            out.print(resposta);
+                     %>
+                      </p>
                     </div>
-                    <section>
-                        <p>
-                            <%
-                                String resposta=(String) request.getAttribute("mensagem");
-                                if(resposta!=null)
-                                   out.print(resposta);
-                            %>
-                        </p>
-                    </section>
                     <div class="table-responsive">
                         <h2>Historico das operações</h2>
                     <table class="table table-striped">
                         <%
                             //exsite uma hierarquia dos JSP
                             //Esta é a maior hierarquia desta pagina
-                            String [] lista={"#","Numero 1","Numero 2","Operador","Resultado"};
-                            String [][] listas={{"0","1", "2","adicao", "3"},
-                                            {"1","2", "3","multiplicacao", "6"},
-                                            {"2","1", "2","divisao", "0.5"},
-                                            {"3","1", "2","divisao", "0.5"},
-                                            {"4","1", "2","divisao", "0.5"},
-                                            {"5","1", "2","divisao", "0.5"},
-                                            {"6","1", "2","divisao", "0.5"},
-                                            {"7","1", "2","divisao", "0.5"},
-                                            {"8","1", "2","divisao", "0.5"}};
-                         %>
-                        <thead>
-                        <%
-                            //Esta é a menor hierarquia desta pagina
-                            out.print("<tr class='bg-primary text-white'>");
-                            for(int x=0;x<lista.length;x++){
-                                out.print("<th scope='col'>");
-                                out.print(lista[x]);
-                                out.print("</th>");
-                                
-                            }
-                            out.print("</tr>");
+                            String [] lista={"#","Numero 1","Operador","Numero 2","Resultado"};
+                            List<Historico> historicos = (List<Historico>)request.getAttribute("historico"); 
                         %>
+                          
+                        <thead>
+                            <tr class="bg-primary text-white">
+                        <%
+                            for(int x=0;x<lista.length;x++){
+                        %>
+                                <th scope="col"><%=lista[x]%></th>
+                        <%      
+                            }
+                        %>
+                            </tr>
                         </thead>
                         <tbody>
 
                         </tbody>
                         <%
-                            //Esta é anenor hierarquia desta pagina
-                            for(int i=0;i<9;i++)
-                            {
-                                out.print("<tr>");
-                                for(int y=0;y<5;y++)
-                                {
-                                    out.print("<td>");
-                                    String r=listas[i][y];
-                                    out.print(r);
-                                    out.print("</td>");
-                                }
-                                out.print("</tr>");
+                            for(Historico hi:historicos){
+                        %>
+                        <tr>
+                            <td><%=hi.getId() %></td>
+                            <td><%=hi.getValor1() %></td>
+                            <td><%=hi.getOperador() %></td>
+                            <td><%=hi.getValor2() %></td>
+                            <td><%=hi.getResultado() %></td>
+                        </tr>
+                        <%
                             }
                         %>
                     </table>
