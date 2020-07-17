@@ -50,6 +50,7 @@ Apos executar o projeto, aparecera um link com a seguinte descrição:
 `http://localhost:8080/CalcWEB`
 
 <img src="/imagens/tela.png" height="240" width="426">
+
 ### Fases do projeto
 No projeto foi desenvolvido em fases, que cada fase implementa um função, uma tecnologia e uma maneira de desenvolvimento. O projeto constitui-se 4 fases que são:
 
