@@ -8,11 +8,13 @@ import javax.persistence.Basic;
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Historico {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "h_seq")
+    @SequenceGenerator(name="historico_sequencia", sequenceName="h_seq")
     private long id;
     
     @Basic
