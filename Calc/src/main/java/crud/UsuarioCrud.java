@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package crud;
-import java.util.List;
 import java.util.Optional;
 import javax.persistence.NoResultException;
 import model.Usuario;
