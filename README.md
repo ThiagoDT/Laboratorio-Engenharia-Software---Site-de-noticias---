@@ -33,17 +33,18 @@ Execute o arquivo chamado `Arquivo de criação do banco de dados.sql` no Mysql 
 Depois da execução do arquivo, o usuario precisa mudar algumas configuração de um arquivo que esta localizado em `src/main/resources/META-INF`. As configuração que precisam ser mudadas são:
 
 `<property name="javax.persistence.jdbc.user" value="coloque nome do usuario do banco"/>`
+<br>
 `<property name="javax.persistence.jdbc.password" value="coloque a senha do usuario"/>`
 
 Apos a mudanca da configuração, o proximo passo é a execução do projeto, que sera mostrado como executa.
 ### Execução do projeto
 Para executar o projeto, precisa estar dentro da pasta do projeto, para que os comandos fucione.
 
-1. __Instala as dependencias e configura o projeto__
+1. __Instala as dependencias e configura o projeto__<br>
 `gradle build`
 
 
-2. __Executa o projeto__
+2. __Executa o projeto__<br>
 `gradle apprun`
 
 Apos executar o projeto, aparecera um link com a seguinte descrição:
