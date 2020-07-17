@@ -11,6 +11,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.FetchType;
 import javax.persistence.GenerationType;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
@@ -18,7 +19,8 @@ import org.hibernate.annotations.FetchMode;
 public class Usuario{
     
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "u_seq")
+    @SequenceGenerator(name="usuario_sequence", sequenceName="u_seq")
     private long id;
     
     @Basic

@@ -12,7 +12,6 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import model.Usuario;
 
 /**
@@ -20,8 +19,13 @@ import model.Usuario;
  * @author Thiago
  */
 public class LoginUsuarioController extends HttpServlet{
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse resp){     
+    public void doPost(HttpServletRequest req, HttpServletResponse resp){     
          try{
             ServletContext sc = req.getServletContext();
             resp.setCharacterEncoding("UTF-8");

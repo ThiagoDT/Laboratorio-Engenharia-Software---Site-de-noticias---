@@ -7,7 +7,6 @@ package controller;
 
 import Sessao.SessaoUsuario;
 import crud.UsuarioCrud;
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,12 +17,15 @@ import model.Usuario;
  * @author Thiago
  */
 public class AtualizarUsuarioController extends HttpServlet {
-    
+	/**
+     *
+     */
+    private static final long serialVersionUID = -5123317669157459139L;
+
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp){
         CalculadoraController c = new CalculadoraController();
         try{
-            ServletContext sc = req.getServletContext();
             resp.setCharacterEncoding("UTF-8");
             resp.setContentType("text/html");
             req.setCharacterEncoding("UTF-8");
