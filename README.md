@@ -8,7 +8,6 @@ Durante o andamento do projeto, o tema foi modificado, que anteriormante seria c
 __Tecnologias do front-end__
 * HMTL5
 * CSS3
-* Javascript
 
 __Tecnologias do back-end__
 * Java 8
@@ -88,7 +87,7 @@ No projeto foi desenvolvido em fases, que cada fase implementa um função, uma 
 - [x] Implementação das funções do dao ao controller
 - [x] Controller de sessão 
 
-## Funções concluidas do projeto Projeto
+## Funções concluidas do Projeto
 - [x] Navegação da paginas do site
 - [x] Login de usuario
 - [x] Criar conta
