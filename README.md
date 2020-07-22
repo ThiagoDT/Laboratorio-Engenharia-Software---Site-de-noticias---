@@ -87,6 +87,11 @@ No projeto foi desenvolvido em fases, que cada fase implementa um função, uma 
 - [x] Implementação das funções do dao ao controller
 - [x] Controller de sessão 
 
+#### Fase 5 - Inserindo Javascript
+- [x] Implementado javascript
+- [x] Usado Jquery no login
+- [x] Usado Jquery na calculadora
+
 ## Funções concluidas do Projeto
 - [x] Navegação da paginas do site
 - [x] Login de usuario
