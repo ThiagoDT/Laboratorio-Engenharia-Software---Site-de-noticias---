@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Column;
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonObjectBuilder;
 import javax.persistence.Basic;
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
@@ -96,9 +99,15 @@ public class Historico {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-    
-    
-    
-    
+
+    public String historicoJson(){
+        JsonObjectBuilder c = Json.createObjectBuilder();
+        c.add("n1", this.valor1);
+        c.add("n2:", this.valor2);
+        c.add("operador", this.operador);
+        c.add("resultado", this.resultado);
+        JsonObject objetoJson = c.build();
+        return objetoJson.toString();
+    }
 
 }

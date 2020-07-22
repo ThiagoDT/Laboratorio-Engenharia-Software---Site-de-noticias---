@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package crud;
+package model;
 import java.util.Optional;
 import javax.persistence.NoResultException;
 import model.Usuario;
@@ -11,17 +11,17 @@ import model.Usuario;
  *
  * @author Thiago
  */
-public class UsuarioCrud extends Factory{
-    protected static UsuarioCrud usucrud;
+public class UsuarioDAO extends Factory{
+    protected static UsuarioDAO usucrud;
     
-    public static UsuarioCrud criar(){
+    public static UsuarioDAO criar(){
         if(usucrud == null)
-            usucrud= new UsuarioCrud();
+            usucrud= new UsuarioDAO();
         return usucrud;
     }
     
     
-    private UsuarioCrud(){
+    private UsuarioDAO(){
         super();
     }
     
