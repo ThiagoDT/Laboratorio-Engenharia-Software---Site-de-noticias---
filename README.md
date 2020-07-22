@@ -44,16 +44,15 @@ Para executar o projeto, precisa estar dentro da pasta do projeto, para que os c
 `gradle build`<br>
 __Obs__: caso queira configura, usando a versão do gradle do desenvolvedor, utilize o comando:<br>
 `gradlew.bat build`  - usado no Windows.<br>
-ou<br>
+         ou<br>
 `gradlew build` - usado no Linux.
 
 
 2. __Executa o projeto__<br>
 `gradle apprun`<br>
-
 __Obs__: caso queira executar a versão do gradle do desenvolvedor, utilize o comando:<br>
 `gradlew.bat apprun`  - usado no Windows.<br>
-ou<br>
+        ou<br>
 `gradlew apprun` - usado no Linux.
 
 Apos executar o projeto, aparecera um link com a seguinte descrição:
