@@ -5,6 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <meta http-equiv="cache-control" content="no-cache" />
         <title>Login</title>
         <link rel="stylesheet" href="Static/css/reset.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -24,7 +25,7 @@
             <section class="conteudo-geral">
                 <div class="formulario">
                     <h2>Login</h2>
-                    <form method="post" action="verificarLogin.action">
+                    <form>
                         <div class="form-group row">
                             <label for="email" class="col-sm-2 col-form-label">Email:</label>
                             <div class="col-sm-8">
@@ -38,22 +39,10 @@
                             </div>
                         </div>
                         <div class="form-group justify-content-center">
-                            <input type="submit" value="Entrar" class="btn btn-primary botao-confirmar">
+                            <input type = "submit" id="logar" class="btn btn-primary botao-confirmar" value="Entrar">
                         </div>  
                     </form>
-                    <p>
-                    <%
-                        try{
-                            String r=(String) request.getAttribute("messagem");
-                            if(r!=null){
-                                out.println(r);
-                                this.log(r);
-                            }
-                        }catch(Exception ex){
-
-                        }
-                    %>
-                    </p>
+                    <p id="resposta"></p>
                 </div>
             </section>
         </main>
@@ -63,4 +52,6 @@
             </div>
         </footer>
     </body>
+    <script src="Static/js/jquery-3.3.1.min.js"></script>
+    <script src="Static/js/login.js"></script>
 </html>

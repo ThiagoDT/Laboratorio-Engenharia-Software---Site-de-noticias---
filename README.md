@@ -8,6 +8,7 @@ Durante o andamento do projeto, o tema foi modificado, que anteriormante seria c
 __Tecnologias do front-end__
 * HMTL5
 * CSS3
+* JavaScript
 
 __Tecnologias do back-end__
 * Java 8
@@ -40,11 +41,19 @@ Apos a mudanca da configuração, o proximo passo é a execução do projeto, qu
 Para executar o projeto, precisa estar dentro da pasta do projeto, para que os comandos fucione.
 
 1. __Instala as dependencias e configura o projeto__<br>
-`gradle build`
+`gradle build`<br>
+__Obs__: caso queira configura, usando a versão do gradle do desenvolvedor, utilize o comando:<br>
+`gradlew.bat build`  - usado no Windows.<br>
+         ou<br>
+`gradlew build` - usado no Linux.
 
 
 2. __Executa o projeto__<br>
-`gradle apprun`
+`gradle apprun`<br>
+__Obs__: caso queira executar a versão do gradle do desenvolvedor, utilize o comando:<br>
+`gradlew.bat apprun`  - usado no Windows.<br>
+        ou<br>
+`gradlew apprun` - usado no Linux.
 
 Apos executar o projeto, aparecera um link com a seguinte descrição:
 `http://localhost:8080/CalcWEB`
@@ -87,6 +96,11 @@ No projeto foi desenvolvido em fases, que cada fase implementa um função, uma 
 - [x] Criação das classes dao sendo UsuarioCrud e HistoricoCrud
 - [x] Implementação das funções do dao ao controller
 - [x] Controller de sessão 
+
+#### Fase 5 - Inserindo Javascript
+- [x] Implementado javascript
+- [x] Usado Jquery no login
+- [x] Usado Jquery na calculadora
 
 ## Funções concluidas do Projeto
 - [x] Navegação da paginas do site
