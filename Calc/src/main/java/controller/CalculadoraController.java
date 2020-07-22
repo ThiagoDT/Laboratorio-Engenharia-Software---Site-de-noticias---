@@ -5,8 +5,7 @@
  */
 package controller;
 
-import Sessao.SessaoUsuario;
-import crud.UsuarioCrud;
+import model.UsuarioDAO;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.Historico;
 import model.Usuario;
 import calculadora.Calculadora;
+import java.io.PrintWriter;
 
 /**
  *
@@ -35,7 +35,7 @@ public class CalculadoraController extends HttpServlet{
         try{
             ServletContext sc = req.getServletContext();
             resp.setCharacterEncoding("UTF-8");
-            resp.setContentType("text/html");
+            resp.setContentType("text/plain");
             cal=new Calculadora();
             
             n1 = Float.parseFloat(req.getParameter("n1"));
@@ -44,7 +44,7 @@ public class CalculadoraController extends HttpServlet{
             
             resultado=cal.gerarResultado(n1,n2,op);
             
-            Usuario usuario = UsuarioCrud.criar()
+            Usuario usuario = UsuarioDAO.criar()
                     .obterUsuario(SessaoUsuario.criar()
                     .obterDados(req)[1]).get();
             
@@ -53,10 +53,11 @@ public class CalculadoraController extends HttpServlet{
             usuario.getHistoricos().add(his);
             his.setUsuario(usuario);
             //O historico é cadastrado pelo UsuarioUrud poque o Usuario é o dono do mapiamento;
-            UsuarioCrud.criar().atualizarUsuario(usuario);
+            UsuarioDAO.criar().atualizarUsuario(usuario);
             
-            req.setAttribute("resultado", resultado);
-            sc.getRequestDispatcher("/Templates/calculadora.jsp").forward(req, resp);
+            PrintWriter pw = resp.getWriter();
+            pw.write(his.historicoJson());
+            pw.close();
         }catch(Exception ex){
             System.err.println("ERR0: "+ex.getMessage()+":\n"+ex.getLocalizedMessage());
         }
@@ -68,7 +69,7 @@ public class CalculadoraController extends HttpServlet{
             ServletContext sc = req.getServletContext();
             resp.setCharacterEncoding("UTF-8");
             resp.setContentType("text/html");
-            Usuario usuario = UsuarioCrud.criar()
+            Usuario usuario = UsuarioDAO.criar()
                     .obterUsuario(SessaoUsuario.criar().obterDados(req)[1]).get();
 
             req.setAttribute("historico", usuario.getHistoricos());
