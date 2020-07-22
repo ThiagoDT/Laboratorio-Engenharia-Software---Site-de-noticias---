@@ -42,10 +42,19 @@ Para executar o projeto, precisa estar dentro da pasta do projeto, para que os c
 
 1. __Instala as dependencias e configura o projeto__<br>
 `gradle build`
+__Obs__: caso queira configura, usando a versão do gradle do desenvolvedor, utilize o comando:
+`gradlew.bat build`  - usado no Windows.
+ou
+`gradlew build` - usado no Linux.
 
 
 2. __Executa o projeto__<br>
 `gradle apprun`
+
+__Obs__: caso queira executar a versão do gradle do desenvolvedor, utilize o comando:
+`gradlew.bat apprun`  - usado no Windows.
+ou
+`gradlew apprun` - usado no Linux.
 
 Apos executar o projeto, aparecera um link com a seguinte descrição:
 `http://localhost:8080/CalcWEB`
