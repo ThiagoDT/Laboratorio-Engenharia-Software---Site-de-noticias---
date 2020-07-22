@@ -5,8 +5,7 @@
  */
 package controller;
 
-import Sessao.SessaoUsuario;
-import crud.UsuarioCrud;
+import model.UsuarioDAO;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -43,8 +42,8 @@ public class CadastrarUsuarioController extends HttpServlet{
             
             if(!n.isEmpty() && !s.isEmpty() && !confS.isEmpty()){
                 
-                UsuarioCrud.criar().criarUsuario(new Usuario(nome, senha, email));
-                Usuario novo = UsuarioCrud.criar().obterUsuario(email).get();
+                UsuarioDAO.criar().criarUsuario(new Usuario(nome, senha, email));
+                Usuario novo = UsuarioDAO.criar().obterUsuario(email).get();
                 SessaoUsuario.criar().criarSessao(novo, req);
                 sc.getRequestDispatcher("/Templates/calculadora.jsp").forward(req, resp);
             }

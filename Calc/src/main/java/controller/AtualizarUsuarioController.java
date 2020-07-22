@@ -5,8 +5,7 @@
  */
 package controller;
 
-import Sessao.SessaoUsuario;
-import crud.UsuarioCrud;
+import model.UsuarioDAO;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -38,12 +37,12 @@ public class AtualizarUsuarioController extends HttpServlet {
             String n=nome.trim().replace(" ", "");
             
             if(!n.isEmpty() && !s.isEmpty()){
-                Usuario novo = UsuarioCrud.criar().
+                Usuario novo = UsuarioDAO.criar().
                         obterUsuario(SessaoUsuario.criar().obterDados(req)[1]).get();
                 novo.setEmail(email);
                 novo.setNome(nome);
                 novo.setSenha(senha);
-                UsuarioCrud.criar().atualizarUsuario(novo);
+                UsuarioDAO.criar().atualizarUsuario(novo);
                 SessaoUsuario.criar().criarSessao(novo, req);
                 
                 req.setAttribute("mensagem", "Dados do usuario alterado");
