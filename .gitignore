@@ -1,5 +1,11 @@
+.gradle
 basic_servet
 Calc/.gradle
 Calc/build
+Calc/bin
 Calc/.nb-gradle/
 Calc/gradle
+Calc/.settings
+Calc/.classpath
+Calc/.nb-gradle-properties
+Cacl/.project
