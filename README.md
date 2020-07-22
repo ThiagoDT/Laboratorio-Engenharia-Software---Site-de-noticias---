@@ -8,6 +8,7 @@ Durante o andamento do projeto, o tema foi modificado, que anteriormante seria c
 __Tecnologias do front-end__
 * HMTL5
 * CSS3
+* JavaScript
 
 __Tecnologias do back-end__
 * Java 8
