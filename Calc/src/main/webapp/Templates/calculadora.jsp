@@ -4,11 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <meta http-equiv="cache-control" content="no-cache" />
         <title>Calculadora</title>
         <link rel="stylesheet" href="Static/css/reset.css">
-	<link rel="stylesheet" href="Static/css/estilo.css">
+	    <link rel="stylesheet" href="Static/css/estilo.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
     </head>
     <body>
         <header>
@@ -23,20 +23,14 @@
             <section class="conteudo-geral">
                 <div class="calculadora">
                     <div>
-                        <p id='Resultado'>Resultado:
-                            <%
-                                String r=(String) request.getAttribute("resultado");
-                                if(r!=null)
-                                    out.print(r);
-                            %>
-                        </p>
+                        <p id='resultado'>Resultado:</p>
                     </div>
-                    <form method="post" action="resultado.action" >
+                    <form>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" for="number1">Numero 1:</span>
                             </div>
-                            <input id="number1" class="form-control" name="n1"type="number" required="true">
+                            <input id="number1" class="form-control" name="n1"type="number"  required="true">
                             
                         </div>
                         <div class="input-group mb-3">
@@ -58,7 +52,7 @@
                             
                         </div>
                         <div class="form-group">
-                            <input class="btn btn-primary btn-block" type="submit" value="Resultado">
+                            <input type = "submit" id="calcular" class="btn btn-primary btn-block" value="Calcular">
                         </div>
 
                     </form> 
@@ -71,4 +65,6 @@
             </div>
         </footer>
     </body>
+    <script src="Static/js/jquery-3.3.1.min.js"></script>
+    <script id="s" src="Static/js/calculadora.js"></script>
 </html>
